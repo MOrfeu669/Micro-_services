@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(
         name = "bcb-client",
-        url = "${bcb.api.url}",
+        url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda=%27{MOEDA}%27&@dataCotacao=%27{DATACOTACAO}%27&$format=json",
         fallback = BCBClientFallback.class
 )
 public interface BCBClient {
